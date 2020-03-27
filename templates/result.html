@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Corona Tracker </title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/result.css')}}"> 
+
+    </head>
+    <body>
+        <div class="container">
+            <h1 class = 'heading'>Result</h1>
+            <div class="table-content">
+                <table>
+                    <tr>
+                        {% for item in columns[1:] %}
+                            <th>{{ item }}</th>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for item in array[1:] %}
+                            <th>{{ item }}</th>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for item in array2 %}
+                            <th>{{ item }}</th>
+                        {% endfor %}
+                    </tr>
+                </table>
+                <button name="Submit" value="Check for Another State" onclick = "window.location.href='{{ url_for( 'hello' ) }}'; ">Check for Another State</button>
+            </div>
+        </div>
+    </body>
+</html>

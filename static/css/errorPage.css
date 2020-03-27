@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid rgb(8, 186, 181);
+    background: #fefefe;
+    color: red;
+    min-width: 135px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+button:hover{
+    color:red;
+}
+#error-code,#page-not-found{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: cursive;
+}
+#description{
+    font-family: cursive;
+
+}

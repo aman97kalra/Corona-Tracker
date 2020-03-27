@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Corona Tracker </title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css')}}"> 
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="center">
+                <img src="/static/images/Corona-Tracker.png" height="200px">
+                <!-- <h1 class = 'heading'>Corona Tracker</h1> -->
+                <div class="input"> 
+                    <!-- <h3 class="new-item">Enter the name of State</h3> -->
+                    <form action = "{{ url_for('result') }}" method="POST" >
+                        <input type="text" name="state" placeholder="Enter the name of state" autocomplete="off">
+                        <button name="submit" value="Submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

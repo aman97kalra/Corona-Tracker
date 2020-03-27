@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/errorPage.css')}}"> 
+
+    </head>
+    <body>
+        <div class="container">
+            <p id="error-code">404</p>
+            <p id="page-not-found">Page Not Found</h1>
+            <p id="description">The page you are looking for doesn't exist. You have entered the wrong input probably.</p>
+            <button name="Submit" value="Check for Another State" onclick = "window.location.href='{{ url_for( 'hello' ) }}'; ">Check for Another State</button>
+        </div>
+    </body>
+</html>
