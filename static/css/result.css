@@ -63,11 +63,4 @@ th,td{
 }
 
 @media screen and ( max-width:600px ){
-    .container{
-        height: 50%;
-    }
-    table{
-        width: 50%;
-        overflow: scroll;
-    }
 }
