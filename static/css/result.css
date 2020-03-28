@@ -6,7 +6,6 @@ body{
 }
 .container{
     position: absolute;
-    height: fit-content;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -62,5 +61,3 @@ th,td{
     border: 2px solid black;
 }
 
-@media screen and ( max-width:600px ){
-}
