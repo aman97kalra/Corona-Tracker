@@ -1,5 +1,12 @@
 body{
     background-image: linear-gradient(45deg, red, rgb(8, 186, 181));
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .container{
     left: 50%;
@@ -68,4 +75,19 @@ button {
 }
 button:hover{
     color:red;
+}
+.footer{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.copy-rights{
+    margin:0px 0px 10px 0px;
+}
+@media screen and ( max-width:400px ){
+    .container{
+        max-width: fit-content;
+    }
 }

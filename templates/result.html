@@ -3,7 +3,7 @@
     <head>
         <title> Corona Tracker </title>
         <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/result.css')}}"> 
-
+        <meta content="width=device-width, initial-scale=0.6" name="viewport" minimum-scale="1"/>
     </head>
     <body>
         <div class="container">
@@ -26,6 +26,7 @@
                         {% endfor %}
                     </tr>
                 </table>
+                <p>Source: Ministry of Health and Family Welfare </p>
                 <button name="Submit" value="Check for Another State" onclick = "window.location.href='{{ url_for( 'hello' ) }}'; ">Check for Another State</button>
             </div>
         </div>
