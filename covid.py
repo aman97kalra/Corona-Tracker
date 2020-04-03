@@ -24,7 +24,8 @@ def result():
     data = response.text
     soup = BeautifulSoup( data, 'html5lib' )
 
-    table = soup.find('div',{'id':'cases'}) 
+    # please stop changing the dom structure guysss !!
+    table = soup.find('div',{'class':'table-responsive'}) 
     
     table_body = table.find('tbody')
     rows = table_body.find_all('tr')
@@ -38,9 +39,9 @@ def result():
             # print(ele)
         states.append(list)
 
-    columns=["S.No","Name of State","Total Indian Confired Cases","Total Confirmed Foreign Cases","Cured Cases","Death"]
+    columns=["S.No","Name of State","Total Confirmed Cases","Cured Cases","Death"]
     # to generate a csv file of the data
-    covid_df= pd.DataFrame(states,columns=["S.No","Name of State","Total Indian Confired Cases","Total Confirmed Foreign Cases","Cured Cases","Death"])
+    covid_df= pd.DataFrame(states,columns=["S.No","Name of State","Total Confirmed Cases","Cured Cases","Death"])
     covid_df.to_csv('stats.csv')
 
     # print('\n',len(states))
@@ -56,8 +57,14 @@ def result():
                     print(column)
                     array.append(column)
                 break
-        for item in states[-2]:
-            array2.append(item)
+
+        for item in states:
+            print('itemis' , item[0])
+            if( input_formatter(item[0]) == input_formatter('Total number of confirmed cases in India') ):
+                for column in item:
+                    print(column)
+                    array2.append(column)
+                break
         
         return render_template("result.html",array=array,array2=array2,columns=columns)
     except:
