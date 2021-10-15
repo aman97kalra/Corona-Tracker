@@ -31,7 +31,7 @@ lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 matplotlib==3.2.0
 mccabe==0.6.1
-nltk==3.4.5
+nltk==3.6.5
 notify2==0.3.1
 numpy==1.18.1
 oauthlib==3.1.0
