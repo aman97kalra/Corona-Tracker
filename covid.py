@@ -44,8 +44,6 @@ def result():
     covid_df= pd.DataFrame(states,columns=["S.No","Name of State","Total Confirmed Cases","Cured Cases","Death"])
     covid_df.to_csv('stats.csv')
 
-    # print('\n',len(states))
-
     # states is an list of list
     try:
         for row in states:
