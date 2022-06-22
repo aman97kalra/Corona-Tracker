@@ -33,7 +33,7 @@ matplotlib==3.2.0
 mccabe==0.6.1
 nltk==3.4.5
 notify2==0.3.1
-numpy==1.18.1
+numpy==1.22.0
 oauthlib==3.1.0
 observable==1.0.3
 pandas==1.0.2
